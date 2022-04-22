@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'Codesign#2715'
-description 'Codesign Weather & Time Managment'
+description 'Codesign Weather & Time Managment - Tuna Terps fork'
 version '1.3.3'
 
 shared_scripts {
@@ -29,3 +29,7 @@ files {
     'html/images/**/*.svg',
     'html/sound/*.ogg'
 }
+
+-- ><>
+lua_54 'yes'
+server_export 'weatherCb'
