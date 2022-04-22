@@ -117,10 +117,30 @@ AddEventHandler('cd_easytime:ForceUpdate', function(data)
         if data.tsunami ~= nil and Config.TsunamiWarning then
             self.tsunami = data.tsunami
         end
-        TriggerClientEvent('cd_easytime:ForceUpdate', -1, data)
+        --local lsBlackout = exports.TunasPowerJob:checkBl()
+        --local bcBlackout = exports.TunasPowerJob:checkBl2()
+        
+        local l = exports.TunasPlayerExports:sortLs()
+        local b = exports.TunasPlayerExports:sortBc()
+        for k, v in pairs(l) do
+            self.blackout = exports.TunasPowerJob:checkBl()
+            TriggerClientEvent('cd_easytime:ForceUpdate', v, data)
+        end
+        
+        for k, v in pairs(l) do
+            self.blackout = exports.TunasPowerJob:checkBl2()
+            TriggerClientEvent('cd_easytime:ForceUpdate', v, data)
+        end
+
+        --TriggerClientEvent('cd_easytime:ForceUpdate', -1, data)
     else
         DropPlayer(_source, L('drop_player'))
     end
+end)
+-- tuna terps
+exports('weatherCb', function(cB)
+    cB = self
+    return cB
 end)
 
 local function LoadSettings()
