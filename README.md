@@ -12,7 +12,7 @@
 Easytime is a small standalone but useful UI for FiveM server administrators which allows them to manipulate time and weather with a click of a button!
 
 
-## Full documentation
+## Full documentati on
 
 https://docs.codesign.pro/free-scripts/easytime-time-and-weather-management
 
